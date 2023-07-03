@@ -89,6 +89,9 @@ RUN chown -R superset:superset ./* \
     && pip install --no-cache-dir -e . \
     && flask fab babel-compile --target superset/translations
 
+RUN cd / && APP_BUILDER=`find / -name flask_appbuilder` && cp -p $APP_BUILDER/translations/zh_HK/LC_MESSAGES/* $APP_BUILDER/translations/zh/LC_MESSAGES/
+RUN cd / && WTFORM=`find / -name wtforms` && cp -p $WTFORM/locale/zh_TW/LC_MESSAGES/* $WTFORM/locale/zh/LC_MESSAGES/
+
 COPY --chmod=755 ./docker/run-server.sh /usr/bin/
 USER superset
 

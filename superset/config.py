@@ -340,7 +340,7 @@ LANGUAGES = {
     "es": {"flag": "es", "name": "Spanish"},
     "it": {"flag": "it", "name": "Italian"},
     "fr": {"flag": "fr", "name": "French"},
-    "zh": {"flag": "cn", "name": "Chinese"},
+    "zh": {"flag": "tw", "name": "Chinese"},
     "ja": {"flag": "jp", "name": "Japanese"},
     "de": {"flag": "de", "name": "German"},
     "pt": {"flag": "pt", "name": "Portuguese"},
@@ -353,7 +353,7 @@ LANGUAGES = {
 }
 # Turning off i18n by default as translation in most languages are
 # incomplete and not well maintained.
-LANGUAGES = {}
+#LANGUAGES = {}
 
 
 # Override the default d3 locale format
@@ -374,7 +374,7 @@ class D3Format(TypedDict, total=False):
 
 D3_FORMAT: D3Format = {}
 
-CURRENCIES = ["USD", "EUR", "GBP", "INR", "MXN", "JPY", "CNY"]
+CURRENCIES = ["USD", "EUR", "GBP", "INR", "MXN", "JPY", "CNY", "TWD"]
 
 # ---------------------------------------------------
 # Feature flags
@@ -1368,7 +1368,7 @@ TEST_DATABASE_CONNECTION_TIMEOUT = timedelta(seconds=30)
 CONTENT_SECURITY_POLICY_WARNING = True
 
 # Do you want Talisman enabled?
-TALISMAN_ENABLED = True
+TALISMAN_ENABLED = False
 # If you want Talisman, how do you want it configured??
 TALISMAN_CONFIG = {
     "content_security_policy": {
